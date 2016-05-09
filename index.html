@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <style>
+        #mainmenu {
+            margin: auto 0px;
+        }
+        #navbar {
+            margin: 0;
+        }
+        .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
+            padding-left: 10px;
+        }
+        #logo.topmenu {
+            margin: 0px 15px;
+        }
+        .topmenu li {
+            margin: 0px 15px;
+        }
+        #login, #signup, #logout {
+            margin: 0px 0px;
+        }
+        li.topmenu:hover{
+            background-color: lightgray;
+        }
+        span.highlighted:hover{
+            color: white;
+        }
+        html,body {
+            height:100%;
+        }
+        #resizable  {
+            width: 150px;
+            height: 100%;
+            padding: 5px 0px;
+            margin: 0;
+            border-color: transparent;
+            float:left;
+        }
+        #resizable h3 {
+            text-align: center;
+            margin: 0;
+        }
+        .vertmenu {
+            padding: 15px 0;
+        }
+        ul .vertmenu {
+            margin: 0 15px;
+        }
+        #containerSubmenuGraph {
+            overflow: auto;
+        }
+        #subMenu {
+            margin: 5px auto;
+        }
+        .hormenu {
+            display: inline-block;
+            margin: 0px 15px;
+        }
+        .hormenu span {
+            padding: 0 5px;
+            margin: 5px auto;
+        }
+        .hormenu ul {
+            padding: 0;
+            margin: auto 0px;
+        }
+
+        #graphCont {
+            margin: 5px auto;
+        }
+
+        img {
+            margin: 0px auto;
+            padding: 0px;
+            width:100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 600px) {
+            #resizable span.listCont {
+                display: none;
+            }
+            #resizable span.listIcon {
+                display: block;
+            }
+
+            #resizable {
+                max-width: 50px;
+            }
+
+        }
+        @media screen and (min-width: 600px) {
+
+            #resizable span.listCont {
+                display: block;
+            }
+            #resizable span.listIcon {
+                display: none;
+            }
+            #resizable {
+                max-width: 150px;
+            }
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+<div id="mainContainer">
+    <div id="navbar" class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+            <div id="mainmenu">
+                <div class="navbar-header">
+                    <a id="logo" href='#' class="navbar-brand">Logo</a>
+                    <button type="button" class="navbar-toggle"
+                            data-toggle="collapse"
+                            data-target=".navbar-collapse">
+                        <span class="sr-only">Sandwich</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                    <ul class="nav navbar-nav navbar-left collapse navbar-collapse">
+                        <li class="topmenu"><a href="#"><span class="highlighted">Top menu 1</span></a></li>
+                        <li class="topmenu"><a href="#"><span class="highlighted">Top menu 2</span></a></li>
+                        <li class="topmenu"><a href="#"><span class="highlighted">Top menu 3</span></a></li>
+                        <li class="topmenu"><a href="#"><span class="highlighted">Top menu 4</span></a></li>
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+                        <li class="topmenu" id="login"><a  href="#"><span class="highlighted">Login</span></a></li>
+                        <li class="topmenu" id="signup"><a  href="#"><span class="highlighted">Sign Up</span></a></li>
+                        <li class="topmenu" id="logout"><a  href="#"><span class="highlighted">Logout</span></a></li>
+                    </ul>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="resizable" class="ui-widget-content">
+        <ul class="vertmenu navbar navbar-default ">
+            <li class="vertmenu list-unstyled ">
+                <a href="#">
+                    <span class="glyphicon glyphicon-briefcase listIcon"></span><span id="res1" class="listCont">VertMenu1</span>
+                </a>
+            </li>
+            <li class="vertmenu list-unstyled">
+                <a href="#">
+                    <span class="glyphicon glyphicon-briefcase listIcon"></span><span class="listCont">VertMenu2</span>
+                </a>
+            </li>
+            <li class="vertmenu list-unstyled">
+                <a href="#">
+                    <span class="glyphicon glyphicon-briefcase listIcon"></span><span class="listCont">VertMenu3</span>
+                </a>
+            </li>
+            <li class="vertmenu list-unstyled">
+                <a href="#">
+                    <span class="glyphicon glyphicon-briefcase listIcon"></span><span class="listCont">VertMenu4</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="containerSubmenuGraph">
+        <div id="subMenu" >
+            <ul class="nav nav-pills static-top">
+                <li class="hormenu list-unstyled">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-briefcase listIcon"></span><span class="listCont">SubMenu1</span>
+                    </a>
+                </li>
+                <li class="hormenu list-unstyled">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-briefcase listIcon"></span><span class="listCont">SubMenu2</span>
+                    </a>
+                </li>
+                <li class="hormenu list-unstyled">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-briefcase listIcon"></span><span class="listCont">SubMenu3</span>
+                    </a>
+                </li>
+                <li class="hormenu list-unstyled">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-briefcase listIcon"></span><span class="listCont">SubMenu4</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="graphCont">
+            <img src="http://www.mathgoodies.com/lessons/graphs/images/construct_line_incorrect.jpg" title="graph">
+        </div>
+    </div>
+</div>
+</body>
+    <script>
+        $(function() {
+            $( "#resizable" ).resizable({
+                maxWidth: 150,
+                minWidth: 50,
+                handles: "e"
+            });
+            var listCount = $("#resizable span.listCont");
+            var listIcon = $("#resizable span.listIcon");
+
+            $( "#resizable" ).on( "resize", function( event, ui ) {
+                var divWidth = ui.size.width;
+
+                console.log(divWidth);
+                if (divWidth<90) {
+                    listCount.css("display","none");
+                    listIcon.css("display","block");
+                    return false;
+                 } else {
+                    listCount.css("display","block");
+                    listIcon.css("display","none");
+                    return false;
+                    }
+            });
+            var listCount1 = $("#resizable span.listCont");
+            var listIcon1 = $("#resizable span.listIcon");
+            $(window).resize (function() {
+                var screenWidth = $(window).width();
+                console.log(screenWidth);
+                if (screenWidth<600) {
+                    listCount1.css("display","none");
+                    listIcon1.css("display","block");
+                } else {
+                    listCount1.css("display","block");
+                    listIcon1.css("display","none");
+                    $("#resizable").width(150);
+                }
+
+
+            });
+
+
+
+        });
+
+    </script>
+</body>
+</html>
